@@ -58,7 +58,6 @@ public class PracticingAllSeenUntilNow1 {
 		System.out.println("The square root of " + sqrtNum1 + " es " + resultSqrt + ".");
 		System.out.println("The result of " + base + " to the power of " + exponent + " is " + resultPow + ".");
 		
-
 	}
 
 }
