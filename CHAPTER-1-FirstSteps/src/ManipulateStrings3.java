@@ -5,13 +5,15 @@ public class ManipulateStrings3 {
 		// TODO Auto-generated method stub
 		
 		String student1A, student2A, student1B, student2B;
+	
 		
-		
-		// equals
+		// EQUALS
 		student1A="Erick";
 		student2A="Erick";
 		
 		System.out.println(student1A.equals(student2A)); // Both words must be written the same way
+		
+		
 		
 		// equalsIgnoreCase
 		student1B="Nathaly";
