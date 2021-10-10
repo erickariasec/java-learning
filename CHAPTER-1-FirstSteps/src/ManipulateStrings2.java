@@ -11,7 +11,7 @@ public class ManipulateStrings2 {
 		String phrase="Today is a good day to learn how to program in Java";
 		
 		
-		// PHRASE SELECTION N°1
+		// PHRASE SELECTION NÂ°1
 		String phrase_resume=phrase.substring(1, 4); // It must show "oda" (Today)
 		/*
 		 * The first subscript corresponds to the character from
@@ -24,13 +24,13 @@ public class ManipulateStrings2 {
 		System.out.println(phrase_resume); // "oda"
 		
 		
-		// PHRASE SELECTION N°2
+		// PHRASE SELECTION NÂ°2
 		phrase_resume=phrase.substring(23, 51); // It must show "learn how to program in Java"
 		
 		System.out.println(phrase_resume); // "learn how to program in Java"
 		
 		
-		// PHRASE SELECTION N°3 - CONCANTENATION (STRING)
+		// PHRASE SELECTION NÂ°3 - CONCANTENATION (STRING)
 		phrase_resume=phrase.substring(0, 22) + " forget evertything..." + " and " + phrase.substring(23, 51) + '.';
 		
 		System.out.println(phrase_resume); // "// Today is a good day to forget evertything... and learn how to program in Java."
