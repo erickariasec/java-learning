@@ -19,10 +19,10 @@ public class VerifyAge {
 		else if ((userAge>0) && (userAge<18)){
 			System.out.println("You are a minor!");
 			System.out.println();
-			System.out.println("You aren´t allowed to entry here!");
+			System.out.println("You aren't allowed to entry here!");
 		}
 		else{
-			System.out.println("That isn´t a valid age!");
+			System.out.println("That isn't a valid age!");
 			System.out.println();
 			System.out.println("Sorry!");
 		}
