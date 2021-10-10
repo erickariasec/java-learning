@@ -19,7 +19,7 @@ public class ManipulateStrings3 {
 		student1B="Nathaly";
 		student2B="nathaly";
 		
-		System.out.println(student1B.equalsIgnoreCase(student2B)); // It doesn´t matter if it is lowercase or uppercase
+		System.out.println(student1B.equalsIgnoreCase(student2B)); // It doesn't matter if it is lowercase or uppercase
 	}
 
 }
