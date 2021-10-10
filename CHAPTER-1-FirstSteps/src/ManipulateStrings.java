@@ -15,7 +15,7 @@ public class ManipulateStrings {
 		// Three ways to find last letter of a String
 		int lastLetter=name.length();
 		System.out.println("The last letter of " + name + " is " + name.charAt(4) + ".");	// Available only for "Erick" or other words of 5 letters. (This is not the best way)
-		System.out.println("The last letter of " + name + " is " + name.charAt(lastLetter - 1) + ".");	// Available for all words, it doesn´t matter the word long.
+		System.out.println("The last letter of " + name + " is " + name.charAt(lastLetter - 1) + ".");	// Available for all words, it doesn't matter the word long.
 		System.out.println("The last letter of " + name + " is " + name.charAt(name.length() - 1) + ".");	// Another method available for all words. (From Youtube comments)
 	}
 
