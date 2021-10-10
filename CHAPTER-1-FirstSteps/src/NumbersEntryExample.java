@@ -17,7 +17,7 @@ public class NumbersEntryExample {
 		
 		
 		// SCAN USER NUMBER AND CALCULATE SQUARE ROOT
-		System.out.println("LET´S CALCULATE SQUARE ROOT");
+		System.out.println("LET'S CALCULATE SQUARE ROOT");
 		
 		String userNumber=JOptionPane.showInputDialog("Enter a number, please");
 		
@@ -25,7 +25,7 @@ public class NumbersEntryExample {
 		double convertedUserNumber=Double.parseDouble(userNumber);
 		
 		System.out.println(); // Add new line
-		System.out.print("The square root of " + convertedUserNumber + " is "); // Doesn´t add new line 
+		System.out.print("The square root of " + convertedUserNumber + " is "); // Doesn't add new line
 		System.out.printf("%1.2f", (Math.sqrt(convertedUserNumber))); // Formatted output form
 
 	}
