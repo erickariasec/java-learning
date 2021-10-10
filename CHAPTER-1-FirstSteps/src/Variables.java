@@ -5,9 +5,9 @@ public class Variables {
 		
 		byte edad;
 		
-		edad=35;	// Declaración e iniciación de variable en una única línea
+		edad=35;	// DeclaraciÃ³n e iniciaciÃ³n de variable en una Ãºnica lÃ­nea
 		
-		/* La siguiente instrucción imprime en la consola (System.out) el
+		/* La siguiente instrucciÃ³n imprime en la consola (System.out) el
 		 * valor de la variable edad
 		 */
 		System.out.println(edad);
