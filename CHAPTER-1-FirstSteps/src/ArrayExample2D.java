@@ -3,7 +3,7 @@ public class ArrayExample2D {
 
         double accumulated;
         double interest=0.10;
-        //                           rows|columns 
+        //                           rows|columns
         double [][] balance=new double[6][5];
 
         System.out.print("CAPITAL\t\t1ST YEAR\t2ND YEAR\t3RD YEAR\t4TH YEAR");
