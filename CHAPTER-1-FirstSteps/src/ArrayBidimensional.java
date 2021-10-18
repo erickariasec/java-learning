@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class ArrayBidimensional /*Two-Dimensional*/{
     public static void main(String[] args) {
 
