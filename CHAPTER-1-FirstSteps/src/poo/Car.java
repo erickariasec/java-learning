@@ -2,11 +2,11 @@ package poo;
 
 public class Car {
 
-    int wheels;
-    int length;
-    int width;
-    int engine;
-    int weight;
+    private int wheels;
+    private int length;
+    private int width;       // To encapsulate data, we use "private"
+    private int engine;
+    private int weight;
 
 
 
