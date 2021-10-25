@@ -9,7 +9,7 @@ public class Car {
     private int weight_platform;
     private String color;
     private int weight_total;
-    private boolean seats_leather, air_conditioner;
+    private boolean seats_leather, airConditioning;
 
 
 
@@ -39,7 +39,7 @@ public class Car {
     }
 
     public void configure_seats(String seats_leather){      // SETTER
-        if(seats_leather=="yes"){
+        if(seats_leather.equals("yes")){
             this.seats_leather=true; // this : To differentiate arguments from variables
         } else{
             this.seats_leather=false;
@@ -52,6 +52,45 @@ public class Car {
         }else{
             return "The car has standard seats";
         }
+    }
+
+    public void configure_airConditioning(String airConditioning){  // SETTER
+        if(airConditioning.equals("yes")){
+            this.airConditioning=true;
+        }else{
+            this.airConditioning=false;
+        }
+    }
+
+    public String return_airConditioning(){     // GETTER
+        if(airConditioning==true){
+            return "The car incorporates air conditioning";
+        }else{
+            return "The car incorporates normal air";
+        }
+    }
+
+    public String return_weightCar() {   // SETTER + GETTER    (POOR PROGRAMMING PRACTICE)
+        int weight_carBody = 500;
+        weight_total = weight_platform + weight_carBody;
+        if (seats_leather == true) {
+            weight_total = weight_total + 50;
+        }
+        if (airConditioning == true) {
+            weight_total = weight_total + 20;
+        }
+        return "The weight of the car is " + weight_total;
+    }
+
+    public int return_priceCar(){       // GETTER
+        int priceFinal=10000;
+        if(seats_leather==true){
+            priceFinal+=2000;
+        }
+        if(airConditioning==true){
+            priceFinal+=1500;
+        }
+        return priceFinal;
     }
 
 }
