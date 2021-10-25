@@ -27,8 +27,8 @@ public class Car {
         return "The length of the car is " + length;
     }
 
-    public void set_color(){                        // SETTER: Access Method
-        color="blue";
+    public void set_color(String color_car){        // SETTER  /  SET PARAMETERS
+        color=color_car;
     }
 
     public String return_color(){                   // GETTER
