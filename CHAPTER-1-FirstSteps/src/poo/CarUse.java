@@ -6,7 +6,7 @@ public class CarUse {
 
         Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
 
-        Renault.set_color();        // Call SETTER from Class Car
+        Renault.set_color("yellow");        // Call SETTER / PARAMETER PASSING
 
         System.out.println(Renault.return_color());
 
