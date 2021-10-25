@@ -6,9 +6,13 @@ public class CarUse {
 
         Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
 
-        Renault.set_color("yellow");        // Call SETTER / PARAMETER PASSING
+        Renault.set_color("blue");        // Call SETTER / PARAMETER PASSING
 
+        System.out.println(Renault.return_generalData());
         System.out.println(Renault.return_color());
+
+        Renault.configure_seats("no");
+        System.out.println(Renault.return_seats());
 
     }
 }
