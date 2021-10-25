@@ -14,5 +14,12 @@ public class CarUse {
         Renault.configure_seats("no");
         System.out.println(Renault.return_seats());
 
+        Renault.configure_airConditioning("yes");
+        System.out.println(Renault.return_airConditioning());
+
+        System.out.println(Renault.return_weightCar() + " kg");
+
+        System.out.println("The price of the car is $" + Renault.return_priceCar());
+
     }
 }
