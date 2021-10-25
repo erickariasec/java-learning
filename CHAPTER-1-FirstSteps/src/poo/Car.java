@@ -7,9 +7,9 @@ public class Car {
     private int width;       // To encapsulate data, we use "private"
     private int engine;
     private int weight_platform;
-    String color;
-    int weight_total;
-    boolean seats_leather, air_conditioner;
+    private String color;
+    private int weight_total;
+    private boolean seats_leather, air_conditioner;
 
 
 
@@ -23,8 +23,11 @@ public class Car {
 
     }
 
-    public String return_large(){                   // GETTER: Access Method
-        return "The length of the car is " + length;
+    public String return_generalData(){                   // GETTER: Access Method
+        return "The platform of my car has " + wheels + " wheels. " +
+                "The car is " + length/1000 + " meters long with a width of "
+                + width + "cm and this platform has a weight of " + weight_platform +
+                " kg.";
     }
 
     public void set_color(String color_car){        // SETTER  /  SET PARAMETERS
@@ -33,6 +36,22 @@ public class Car {
 
     public String return_color(){                   // GETTER
         return "The color of the car is " + color;
+    }
+
+    public void configure_seats(String seats_leather){      // SETTER
+        if(seats_leather=="yes"){
+            this.seats_leather=true; // this : To differentiate arguments from variables
+        } else{
+            this.seats_leather=false;
+        }
+    }
+
+    public String return_seats(){                           // GETTER
+        if(seats_leather==true){
+            return "The car has seats leather";
+        }else{
+            return "The car has standard seats";
+        }
     }
 
 }
