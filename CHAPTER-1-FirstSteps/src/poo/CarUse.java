@@ -6,9 +6,9 @@ public class CarUse {
 
         Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
 
-        System.out.println(Renault.return_large());     // Return Getter
+        Renault.set_color();        // Call SETTER from Class Car
 
-        //System.out.println("This car has " + Renault.wheels + " wheels.");
+        System.out.println(Renault.return_color());
 
     }
 }
