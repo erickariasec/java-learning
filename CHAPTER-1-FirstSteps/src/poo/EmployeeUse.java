@@ -18,11 +18,13 @@ public class EmployeeUse {
         System.out.println("Name: " + Employee2.returnName() + " Salary: " + Employee2.returnSalary() + " Discharge Date: " + Employee2.returnDischargeDateContract());
         System.out.println("Name: " + Employee3.returnName() + " Salary: " + Employee3.returnSalary() + " Discharge Date: " + Employee3.returnDischargeDateContract());*/
 
-        Employee[] myEmployees=new Employee[3];
+        Employee[] myEmployees=new Employee[5];
 
         myEmployees[0]=new Employee("Stephan Hidalgo", 85000, 1990, 12, 17);
         myEmployees[1]=new Employee("Erick Brooks", 95000, 1995, 6, 2);
         myEmployees[2]=new Employee("Michell Heralds", 105000, 2002, 3, 15);
+        myEmployees[3]=new Employee("Susan Vasquez");   // Rest of parameters are set down
+        myEmployees[4]=new Employee("Emily Rose");
 
         // BUCLE FOR (Normal)
         /*for(int i=0; i<3; i++){
@@ -56,7 +58,11 @@ class Employee{
         name=nam;
         salary=sal;
         GregorianCalendar calendar=new GregorianCalendar(year, month-1, day);   // CLASS: GregorianCalendar - January=0
-        dischargeDateContract=calendar.getTime();   // METHOD: getTime (Inherited Mehtod)
+        dischargeDateContract=calendar.getTime();   // METHOD: getTime (Inherited Method)
+    }
+
+    public Employee(String nam){        // CONSTRUCTOR OVERLOAD
+        this(nam, 30000, 2000, 1, 1);
     }
 
     public String returnName(){     // GETTER
@@ -76,7 +82,7 @@ class Employee{
         salary+=salaryIncrease;
     }
 
-    private String name;
+    private final String name;      // CONSTANT
     private double salary;
-    private Date dischargeDateContract;
+    private final Date dischargeDateContract;       // CONSTANT
 }
