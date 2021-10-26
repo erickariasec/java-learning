@@ -1,7 +1,7 @@
 package poo;
 
 public class TestConstant {
-
+                //void means that does not return any value
     public static void main(String[] args) { // Step 1: Create, left empty
 
         // Step 6: Instantiate EmployeeTest Class / Create objects belonging to EmployeeTest Class
@@ -19,7 +19,8 @@ public class TestConstant {
         System.out.println(Employee3.returnEmployeeData());
         System.out.println(Employee4.returnEmployeeData());
 
-
+        System.out.println(EmployeesTest.returnNextID());   // Calling STATIC Method
+        //                    Math      .  pow       ()
     }
 
     static class EmployeesTest{     // Step 2: Create Class
@@ -42,11 +43,15 @@ public class TestConstant {
                     " and the ID=" + ID;
         }
 
+        public static String returnNextID(){            // STATIC METHOD
+            return "The next ID is: " + NextID;
+        }
+
         private final String name;      // CONSTANT
         private String jobSection;      // Step 3: Create instance fields or class fields
 
         private final int ID;
-        private static int NextID=1;        // STATIC METHOD
+        private static int NextID=1;        // STATIC VARIABLE
     }
 
 }
