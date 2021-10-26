@@ -23,35 +23,35 @@ public class TestConstant {
         //                    Math      .  pow       ()
     }
 
-    static class EmployeesTest{     // Step 2: Create Class
+}
 
-        public EmployeesTest(String nam){       // Step 4: Create Constructor Method
-            name=nam;
-            jobSection="Administration";
-            ID=NextID;
-            NextID++;
-        }
+class EmployeesTest{     // Step 2: Create Class
 
-                                                // Step 5: Build Setters and Getters
-        public void changeJobSection(String jobSection){        // SETTER
-            this.jobSection=jobSection;
-        }
-
-
-        public String returnEmployeeData(){         // GETTER
-            return "The name is: " + name + ", the job section is: " + jobSection +
-                    " and the ID=" + ID;
-        }
-
-        public static String returnNextID(){            // STATIC METHOD
-            return "The next ID is: " + NextID;
-        }
-
-        private final String name;      // CONSTANT
-        private String jobSection;      // Step 3: Create instance fields or class fields
-
-        private final int ID;
-        private static int NextID=1;        // STATIC VARIABLE
+    public EmployeesTest(String nam){       // Step 4: Create Constructor Method
+        name=nam;
+        jobSection="Administration";
+        ID=NextID;
+        NextID++;
     }
 
+    // Step 5: Build Setters and Getters
+    public void changeJobSection(String jobSection){        // SETTER
+        this.jobSection=jobSection;
+    }
+
+
+    public String returnEmployeeData(){         // GETTER
+        return "The name is: " + name + ", the job section is: " + jobSection +
+                " and the ID=" + ID;
+    }
+
+    public static String returnNextID(){            // STATIC METHOD
+        return "The next ID is: " + NextID;
+    }
+
+    private final String name;      // CONSTANT
+    private String jobSection;      // Step 3: Create instance fields or class fields
+
+    private final int ID;
+    private static int NextID=1;        // STATIC VARIABLE
 }
