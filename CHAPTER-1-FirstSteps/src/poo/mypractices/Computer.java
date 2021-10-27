@@ -23,7 +23,7 @@ public class Computer {
 
 
     public String returnGeneralComputerData(){      // GETTER for General Computer Data
-        return "Take advantage of this offer, take this computer home for only $" +
+        return "Take advantage of this offer, take this computer home for only " +
                 "$1200" + "\nCOMPUTER INCLUDES:\n" +
                 monitor + " Monitor\n" +
                 cpu + " CPU\n" +
