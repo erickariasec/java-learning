@@ -6,7 +6,15 @@ public class VehicleUse {
 
     public static void main(String[] args) {
 
-        Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
+        Car MyCar1=new Car();       // Creation of the first Instance or Method belongs to Car Class
+
+        MyCar1.set_color("Red");
+
+
+        Van MyVan1=new Van(7, 580);     // Creation of Van Object
+
+
+        /*Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
 
         Renault.set_color(JOptionPane.showInputDialog("Enter color"));        // Call SETTER / PARAMETER PASSING
 
@@ -21,7 +29,7 @@ public class VehicleUse {
 
         System.out.println(Renault.return_weightCar() + " kg");
 
-        System.out.println("The price of the car is $" + Renault.return_priceCar());
+        System.out.println("The price of the car is $" + Renault.return_priceCar());*/
 
     }
 }
