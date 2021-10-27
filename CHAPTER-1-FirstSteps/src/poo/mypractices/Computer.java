@@ -23,7 +23,7 @@ public class Computer {
 
 
     public void setUpSSD(String ssd){       // SETTER for SSD
-        ssd=this.ssd;
+        this.ssd=ssd;
     }
 
     public String returnSSD(){
