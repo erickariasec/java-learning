@@ -2,11 +2,12 @@ package poo.mypractices;
 
 public class Computer {
 
-    private int keyboard;
-    private int monitor;
-    private int cpu;
-    private int mouse;                      // ENCAPSULATION
+    private final int keyboard;
+    private final int monitor;
+    private final int cpu;
+    private final int mouse;                      // ENCAPSULATION
     private int computerFinalPrice;
+    private String ssd;
     private boolean headphones;
     private boolean webcam;
     private boolean printer;
@@ -20,6 +21,10 @@ public class Computer {
     }
 
 
+
+    public void setUpSSD(String ssd){       // SETTER for SSD
+        ssd=this.ssd;
+    }
 
     public void setUpHeadphones(String headphones){              // SETTER for Headphones
         if (headphones.equalsIgnoreCase("yes")) {
@@ -70,6 +75,18 @@ public class Computer {
 
 
     public int returnComputerFinalPrice(){                      // GETTER for Computer Final Price
+        if (ssd.equalsIgnoreCase("basic")){
+            computerFinalPrice+=0;
+        }
+        if (ssd.equalsIgnoreCase("128")){
+            computerFinalPrice+=100;
+        }
+        if (ssd.equalsIgnoreCase("256")){
+            computerFinalPrice+=150;
+        }
+        if (ssd.equalsIgnoreCase("500")){
+            computerFinalPrice+=250;
+        }
         if (headphones){
             computerFinalPrice+=35;
         }
