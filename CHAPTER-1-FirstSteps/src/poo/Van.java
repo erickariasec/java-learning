@@ -10,4 +10,10 @@ public class Van extends Car{       // Van Class INHERITS from Car Class
         this.load_capacity=load_capacity;
         this.passenger_capacity=passenger_capacity;
     }
+
+    public String returnVanData(){      // GETTER for Return Van Data
+        return " The load capacity is " + load_capacity + " and the" +
+                " passenger capacity is " + passenger_capacity;
+    }
+
 }
