@@ -22,6 +22,17 @@ public class Computer {
 
 
 
+    public String returnGeneralComputerData(){      // GETTER for General Computer Data
+        return "Take advantage of this offer, take this computer home for only $" +
+                "$1200" + "\nCOMPUTER INCLUDES:\n" +
+                monitor + " Monitor\n" +
+                cpu + " CPU\n" +
+                keyboard + " Keyboards (1 Normal + 1 Gaming)\n" +
+                mouse + " Mouses (1 Normal + 1 Gaming)\n\n" +
+                "Write \"OK\" to buy!";
+    }
+
+
     public void setUpSSD(String ssd){       // SETTER for SSD
         this.ssd=ssd;
     }
@@ -39,6 +50,8 @@ public class Computer {
             return "Your computer includes basic HDD 1TB";
         }
     }
+
+
 
     public void setUpHeadphones(String headphones){              // SETTER for Headphones
         if (headphones.equalsIgnoreCase("yes")) {
