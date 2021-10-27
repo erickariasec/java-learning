@@ -14,6 +14,13 @@ public class ComputerUse {
         System.out.print("\t\t\t\t\t   SPECIAL OFFER\n\n");
         System.out.print("\t\t\t\t\t--------------------\n\n");
 
+        //System.out.println(BasicComputer.returnGeneralComputerData());
+        System.out.println(JOptionPane.showInputDialog(BasicComputer.returnGeneralComputerData()));
+
+        BasicComputer.setUpSSD(JOptionPane.showInputDialog("Your computer includes HDD 1TB, if you want " + "SSD," +
+                " write the capacity of the disk (128/256/500), else write \"BASIC\""));
+        System.out.println(BasicComputer.returnSSD());
+
         BasicComputer.setUpHeadphones(JOptionPane.showInputDialog("Do you want to add headphones for only $35? (YES/NO)"));
         System.out.println(BasicComputer.returnHeadphones());
 
