@@ -26,6 +26,20 @@ public class Computer {
         ssd=this.ssd;
     }
 
+    public String returnSSD(){
+        if (ssd.equalsIgnoreCase("128")){
+            return "Your computer includes SSD 128GB";
+        }
+        if (ssd.equalsIgnoreCase("256")){
+            return "Your computer includes SSD 256GB";
+        }
+        if (ssd.equalsIgnoreCase("500")){
+            return "Your computer includes SSD 500GB";
+        }else {
+            return "Your computer includes basic HDD 1TB";
+        }
+    }
+
     public void setUpHeadphones(String headphones){              // SETTER for Headphones
         if (headphones.equalsIgnoreCase("yes")) {
             this.headphones = true;
