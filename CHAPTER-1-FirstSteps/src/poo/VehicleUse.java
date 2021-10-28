@@ -11,9 +11,17 @@ public class VehicleUse {
         MyCar1.set_color("Red");
 
 
-        Van MyVan1=new Van(7, 580);     // Creation of Van Object
+        Van MyVan1=new Van(580, 7);     // Creation of Van Object
+
+        MyVan1.set_color("Blue");
+        MyVan1.configure_seats("yes");
+        MyVan1.configure_airConditioning("yes");
+
+        System.out.println(MyCar1.return_generalData() + " " + MyCar1.return_color());
+        System.out.println(MyVan1.return_generalData() + MyVan1.returnVanData());
 
 
+        // OLD VERSION
         /*Car Renault=new Car();      // INSTANTIATE A CLASS. CLASS EXEMPLARY
 
         Renault.set_color(JOptionPane.showInputDialog("Enter color"));        // Call SETTER / PARAMETER PASSING
