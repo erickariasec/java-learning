@@ -51,7 +51,7 @@ public class EmployeeUse {
     }
 }
 
-class Employee{
+class Employee{         // PARENT CLASS
 
     public Employee(String nam, double sal, int year, int month, int day){  // This CONSTRUCTOR method receives PARAMETERS/ARGUMENTS
 
@@ -59,6 +59,8 @@ class Employee{
         salary=sal;
         GregorianCalendar calendar=new GregorianCalendar(year, month-1, day);   // CLASS: GregorianCalendar - January=0
         dischargeDateContract=calendar.getTime();   // METHOD: getTime (Inherited Method)
+        ID=NextID;
+        NextID++;
     }
 
     public Employee(String nam){        // CONSTRUCTOR OVERLOAD
@@ -66,7 +68,7 @@ class Employee{
     }
 
     public String returnName(){     // GETTER
-        return name;
+        return name + " ID: " + ID;
     }
 
     public double returnSalary(){   // GETTER
@@ -85,4 +87,29 @@ class Employee{
     private final String name;      // CONSTANT
     private double salary;
     private final Date dischargeDateContract;       // CONSTANT
+    private final int ID;
+    private static int NextID=1;        // STATIC VARIABLE
+}
+
+
+class Headship extends Employee{            // CHILD CLASS - INHERITS FROM EMPLOYEE CLASS
+
+    public Headship(String nom, double sal, int year, int month, int day){
+
+        // Passing Constructor Method with all Parameters using super
+        super(nom, sal, year, month, day);  // Call Main Constructor Method from Employee
+
+    }
+
+    public void setIncentive(double b){
+        incentive=b;
+    }
+
+    public double returnSalary(){  // OVERWRITING Employee Method, only for this Class
+        double salaryBoss=super.returnSalary();  // Calling returnSalary form Parent Class
+        return salaryBoss + incentive;
+    }
+
+    private double incentive;
+
 }
