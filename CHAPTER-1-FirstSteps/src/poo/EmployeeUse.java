@@ -5,42 +5,25 @@ import java.util.*;
 public class EmployeeUse {
     public static void main(String[] args) {
 
-        // THE LONGEST WAY
-        /*Employee Employee1=new Employee("Stephan Hidalgo", 85000, 1990, 12, 17);
-        Employee Employee2=new Employee("Erick Brooks", 95000, 1995, 6, 2);
-        Employee Employee3=new Employee("Michell Heralds", 105000, 2002, 3, 15);
+        Headship bossRRHH=new Headship("Juan Diaz", 55000, 2006, 9, 25);
+        bossRRHH.setIncentive(2570);    // SET INCENTIVE
 
-        Employee1.raiseSalary(5);
-        Employee2.raiseSalary(5);
-        Employee3.raiseSalary(5);
-
-        System.out.println("Name: " + Employee1.returnName() + " Salary: " + Employee1.returnSalary() + " Discharge Date: " + Employee1.returnDischargeDateContract());
-        System.out.println("Name: " + Employee2.returnName() + " Salary: " + Employee2.returnSalary() + " Discharge Date: " + Employee2.returnDischargeDateContract());
-        System.out.println("Name: " + Employee3.returnName() + " Salary: " + Employee3.returnSalary() + " Discharge Date: " + Employee3.returnDischargeDateContract());*/
-
-        Employee[] myEmployees=new Employee[5];
+        Employee[] myEmployees=new Employee[7];
 
         myEmployees[0]=new Employee("Stephan Hidalgo", 85000, 1990, 12, 17);
         myEmployees[1]=new Employee("Erick Brooks", 95000, 1995, 6, 2);
         myEmployees[2]=new Employee("Michell Heralds", 105000, 2002, 3, 15);
         myEmployees[3]=new Employee("Susan Vasquez");   // Rest of parameters are set down
         myEmployees[4]=new Employee("Emily Rose");
-
-        // BUCLE FOR (Normal)
-        /*for(int i=0; i<3; i++){
-            myEmployees[i].raiseSalary(5);
-        }*/
+        myEmployees[5]=bossRRHH;    // POLYMORPHISM in action!  -  Substitution Principle
+        // We can use an object from subclass when the program expects an object of superclass.
+        myEmployees[6]=new Headship("Marla Villarroel", 95000, 1999, 9, 12);
+        // This is exactly the same, is another way to use POLYMORPHISM
 
         // BUCLE FOR EACH (Improved)
         for(Employee i: myEmployees){
             i.raiseSalary(5);
         }
-
-        // BUCLE FOR (Normal)
-        /*for(int i=0; i<3; i++){
-            System.out.println("Name: " + myEmployees[i].returnName() + " Salary: " + myEmployees[i].returnSalary() +
-                    " Discharge Date: " + myEmployees[i].returnDischargeDateContract());
-        }*/
 
         // BUCLE FOR EACH (Improved)
         for(Employee i: myEmployees){
@@ -55,7 +38,7 @@ class Employee{         // PARENT CLASS
 
     public Employee(String nam, double sal, int year, int month, int day){  // This CONSTRUCTOR method receives PARAMETERS/ARGUMENTS
 
-        name=nam;
+        NAME =nam;
         salary=sal;
         GregorianCalendar calendar=new GregorianCalendar(year, month-1, day);   // CLASS: GregorianCalendar - January=0
         dischargeDateContract=calendar.getTime();   // METHOD: getTime (Inherited Method)
@@ -68,7 +51,7 @@ class Employee{         // PARENT CLASS
     }
 
     public String returnName(){     // GETTER
-        return name + " ID: " + ID;
+        return NAME + " ID: " + ID;
     }
 
     public double returnSalary(){   // GETTER
@@ -84,7 +67,7 @@ class Employee{         // PARENT CLASS
         salary+=salaryIncrease;
     }
 
-    private final String name;      // CONSTANT
+    private final String NAME;      // CONSTANT
     private double salary;
     private final Date dischargeDateContract;       // CONSTANT
     private final int ID;
