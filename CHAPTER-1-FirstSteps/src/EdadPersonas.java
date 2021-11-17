@@ -20,7 +20,7 @@ public class EdadPersonas {
         Scanner dataEntryPersona=new Scanner(System.in);
         Scanner dataEntryEdad=new Scanner(System.in);
 
-        // Leer los nombres de las 5 personas
+        // Leer los nombres y edades de las 5 personas
         for(int i=0; i<5; i++) {
             System.out.println("Ingresa Nombre [" + (i + 1) + "]: ");
             persona[i] = dataEntryPersona.nextLine();
