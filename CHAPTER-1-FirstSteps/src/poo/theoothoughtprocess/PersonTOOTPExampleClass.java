@@ -1,4 +1,4 @@
-package poo.mypractices;
+package poo.theoothoughtprocess;
 
 public class PersonTOOTPExampleClass {
 
