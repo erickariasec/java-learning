@@ -11,8 +11,7 @@ public abstract class RectangleTOOTP extends ShapeTOOTP{
     }
 
     public double getArea() {
-        //area = length*width;
-        setArea(length*width);
+        area = length*width;
         return (area);
     }
 
