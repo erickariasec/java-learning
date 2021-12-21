@@ -1,6 +1,6 @@
 package poo.theoothoughtprocess;
 
-public class CircleTOOTP extends ShapeTOOTP{
+/*public class CircleTOOTP extends ShapeTOOTP{
 
     double radius;
     public CircleTOOTP(double r) {
@@ -12,4 +12,4 @@ public class CircleTOOTP extends ShapeTOOTP{
         return (area);
     }
 
-}
+}*/
