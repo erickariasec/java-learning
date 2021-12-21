@@ -1,6 +1,6 @@
 package poo.theoothoughtprocess;
 
-public abstract class RectangleTOOTP extends ShapeTOOTP{
+/*public class RectangleTOOTP extends ShapeTOOTP{
 
     double length;
     double width;
@@ -15,4 +15,4 @@ public abstract class RectangleTOOTP extends ShapeTOOTP{
         return (area);
     }
 
-}
+}*/
