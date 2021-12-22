@@ -40,13 +40,16 @@ public class MathOperations {
             case 2:
                 askNumbers();
                 substractNumbers();
+                break;
 
             case 3:
                 askNumbers();
                 multiplicateNumbers();
+                break;
 
             default:
                 System.out.println("\nOpción no disponible");
+                break;
         }
     }
 
