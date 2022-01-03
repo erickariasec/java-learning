@@ -6,12 +6,37 @@ public class ATM {
 
     public int currentBalance = 1200;
     public String password = "Erick1234";
+    public String passwordConfirmation = "Erick1234";
+    public String userName = "Erick Arias";
+    public String ID = "1721055022";
+
+    // CREATE ACCOUNT - Method to Create Account
+    public void setAccountCreator(){
+        userName = JOptionPane.showInputDialog(null, "WELCOME TO THE INTERNATIONAL BANK\n\n" +
+                "Enter your name, please:");
+        ID = JOptionPane.showInputDialog(null, "Enter your ID, please:");
+
+        do{
+            password = JOptionPane.showInputDialog(null, "Enter your new password:");
+            passwordConfirmation = JOptionPane.showInputDialog(null, "Retype your password:");
+
+            if(!password.equals(passwordConfirmation)){
+                JOptionPane.showMessageDialog(null, "The password does not match!\n\nTRY AGAIN!");
+            }
+
+        }while(!password.equals(passwordConfirmation));
+
+        currentBalance = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the value of your first deposit"));
+        JOptionPane.showMessageDialog(null, "Account Created Succesfully");
+    }
 
     // MAIN MENU - Method to show Main Menu
     public void setMenu(){
         int option = 0;
         do{
            String optionMenuSelected = JOptionPane.showInputDialog(null,"" +
+                   userName + "\n" +
+                   "ID: " + ID + "\n\n" +
                    "1. Check Balance\n" +
                    "2. Deposit\n" +
                    "3. Withdraw\n" +
@@ -45,7 +70,7 @@ public class ATM {
 
                    // Exit
                    case 5:
-                       JOptionPane.showMessageDialog(null, "Thank you for your attention!");
+                       JOptionPane.showMessageDialog(null, "Thank you for your attention " + userName + "!");
                        break;
 
                    default:
