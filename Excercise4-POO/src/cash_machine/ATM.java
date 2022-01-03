@@ -19,7 +19,7 @@ public class ATM {
                    "5. Exit\n\n" +
                    "Enter your option: ");
 
-           if(optionMenuSelected != null && ValidateNumber.isNum(optionMenuSelected)){
+           if(ValidateNumber.isNum(optionMenuSelected)){
                option = Integer.parseInt(optionMenuSelected);
 
                switch (option){
@@ -60,10 +60,10 @@ public class ATM {
     // Method to Deposit
     public void setDeposit(){
         String depositString;
-        int deposit = 0;
+        int deposit;
 
         depositString = JOptionPane.showInputDialog(null, "Enter the value you want to deposit:");
-        if (depositString != null && !depositString.equals("") && ValidateNumber.isNum(depositString)){
+        if (ValidateNumber.isNum(depositString)){
             deposit = Integer.parseInt(depositString);
 
             if (deposit > 0){
@@ -81,87 +81,86 @@ public class ATM {
         String withdrawString;
         withdrawString = JOptionPane.showInputDialog(null, "Enter your password: ");
 
-        if(withdrawString == null){
-            // Return Main Menu
-        }else if(!withdrawString.equals("")){
-            if(withdrawString.equals(password)){
-                withdrawString = JOptionPane.showInputDialog(null, ""
-                + "a) $20\n"
-                + "b) $50\n"
-                + "c) $100\n"
-                + "d) $500\n"
-                + "e) $1000\n"
-                + "f) Another amount\n\n"
-                + "Enter your option: ");
+        if(withdrawString.equals(password)){
+            withdrawString = JOptionPane.showInputDialog(null, ""
+            + "1) $20\n"
+            + "2) $50\n"
+            + "3) $100\n"
+            + "4) $500\n"
+            + "5) $1000\n"
+            + "6) Another amount\n\n"
+            + "Enter your option: ");
 
-                if(withdrawString != null){
-                    if(!withdrawString.equals("")){
-                        switch (withdrawString){
-                            case "a":
-                                if((currentBalance - 20) >= 10){
-                                    currentBalance -= 20;
-                                    JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
+            int withdraw = Integer.parseInt(withdrawString);
 
-                            case "b":
-                                if((currentBalance - 50) >= 10){
-                                    currentBalance -= 50;
-                                    JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
-
-                            case "c":
-                                if((currentBalance - 100) >= 10){
-                                    currentBalance -= 100;
-                                    JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
-
-                            case "d":
-                                if((currentBalance - 500) >= 10){
-                                    currentBalance -= 500;
-                                    JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
-
-                            case "e":
-                                if((currentBalance - 1000 >= 10)){
-                                    currentBalance -= 1000;
-                                    JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
-
-                            case "f":
-                                withdrawString = JOptionPane.showInputDialog(null, "Enter the amount to withdraw:");
-                                if((withdrawString != null && !withdrawString.equals("") && ValidateNumber.isNum(withdrawString)
-                                        && ((currentBalance - Integer.parseInt(withdrawString) >= 10)) && (Integer.parseInt(withdrawString) > 0))){
-                                            currentBalance -= Integer.parseInt(withdrawString);
-                                            JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
-                                }else{
-                                    JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
-                                }
-                                break;
-
-                            default:
-                                JOptionPane.showMessageDialog(null, "Enter a valid option!");
-                                break;
-                        }
+            switch (withdraw){
+                // Withdraw $20
+                case 1:
+                    if((currentBalance - 20) >= 10){
+                        currentBalance -= 20;
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
                     }
-                }
-            }else {
-                JOptionPane.showMessageDialog(null, "Incorrect Password");
+                    break;
+
+                // Withdraw $50
+                case 2:
+                    if((currentBalance - 50) >= 10){
+                        currentBalance -= 50;
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
+                    }
+                    break;
+
+                // Withdraw $100
+                case 3:
+                    if((currentBalance - 100) >= 10){
+                        currentBalance -= 100;
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
+                    }
+                    break;
+
+                // Withdraw $500
+                case 4:
+                    if((currentBalance - 500) >= 10){
+                        currentBalance -= 500;
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
+                    }
+                    break;
+
+                // Withdraw $1000
+                case 5:
+                    if((currentBalance - 1000 >= 10)){
+                        currentBalance -= 1000;
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
+                    }
+                    break;
+
+                // Withdraw Another Amount
+                case 6:
+                    withdrawString = JOptionPane.showInputDialog(null, "Enter the amount to withdraw:");
+                    if((ValidateNumber.isNum(withdrawString) && ((currentBalance - Integer.parseInt(withdrawString) >= 10)) && (Integer.parseInt(withdrawString) > 0))){
+                        currentBalance -= Integer.parseInt(withdrawString);
+                        JOptionPane.showMessageDialog(null, "Your current balance is " + currentBalance);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "You need at least 10 dollars in your account");
+                    }
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "Enter a valid option!");
+                break;
             }
+        }else{
+            JOptionPane.showMessageDialog(null, "Incorrect Password");
         }
     }
 
