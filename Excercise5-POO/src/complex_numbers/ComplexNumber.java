@@ -30,7 +30,7 @@ public class ComplexNumber {
 
     // Method to calculate Product
     public ComplexNumber getProductCalculation(ComplexNumber num){
-        ComplexNumber multiplication = new ComplexNumber(((realPart * num.getRealPart2()) - imaginaryPart * getImaginaryPart2()),
+        ComplexNumber multiplication = new ComplexNumber(((realPart * num.getRealPart2()) - imaginaryPart * num.getImaginaryPart2()),
                 ((realPart * num.getImaginaryPart2()) + (num.getRealPart2() * imaginaryPart)));
         return multiplication;
     }
@@ -38,7 +38,7 @@ public class ComplexNumber {
     // Method to Check Equality
     public boolean getEqualityChecker(ComplexNumber num){
         boolean equality = false;
-        if((realPart == num.getRealPart2()) && (imaginaryPart == getImaginaryPart2())){
+        if((realPart == num.getRealPart2()) && (imaginaryPart == num.getImaginaryPart2())){
             equality = true;
         }
         return equality;
