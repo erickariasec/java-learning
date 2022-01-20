@@ -3,8 +3,8 @@ package JavaBasics.S07_CreatingClasesJava;
 public class Person {
 
     // Class Attributes
-    String name;
-    String lastName;
+    public String name;     // It is not a good practice to establish Attributes as public
+    public String lastName;     // It is not a good practice to establish Attributes as public
 
     // Class Methods
     public void showInformation(){
