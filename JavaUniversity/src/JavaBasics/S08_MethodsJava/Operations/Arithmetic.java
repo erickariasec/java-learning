@@ -12,9 +12,17 @@ public class Arithmetic {
         System.out.println("The result of the sum is: " + result);
     }
 
-    // Method to sum with integer return 
+    // Method to sum with integer return
     public int sumWithReturn(){
         return a + b;
+    }
+
+    // Method to sum establishing parameters
+    public int sumEstablishingParameters(int arg1, int arg2){
+        a = arg1;
+        b = arg2;           // This is not a good practice
+        //return a + b;
+        return sumWithReturn();  // Calls the logic of sumWithReturn Method
     }
 
 }
