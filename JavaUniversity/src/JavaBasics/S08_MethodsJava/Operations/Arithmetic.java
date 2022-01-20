@@ -18,9 +18,10 @@ public class Arithmetic {
     }
 
     // Method to sum establishing parameters
-    public int sumEstablishingParameters(int arg1, int arg2){
-        a = arg1;
-        b = arg2;           // This is not a good practice
+    public int sumEstablishingParameters(int a, int b){
+        /* "this" refers to an attribute of a Class */
+        this.a = a;     // Parameter 'a' is assigned to Attribute 'a'(this.a)
+        this.b = b;     // Parameter 'b' is assigned to Attribute 'b'(this.b)
         //return a + b;
         return sumWithReturn();  // Calls the logic of sumWithReturn Method
     }
