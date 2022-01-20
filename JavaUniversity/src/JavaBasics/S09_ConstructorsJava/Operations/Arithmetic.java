@@ -8,7 +8,14 @@ public class Arithmetic {
 
     // Empty Constructor Method
     public Arithmetic(){
-        System.out.println("Executing Constructor"); // It will be printed when instantiate this Class
+        System.out.println("Executing Empty Constructor"); // It will be printed when instantiate this Class
+    }
+
+    // Constructor Method with Parameters
+    public Arithmetic(int a, int b){
+        this.a = a;
+        this.b = b;
+        System.out.println("Executing Constructor after Assigning Arguments in ArithmeticUse");
     }
 
     // Method to sum
