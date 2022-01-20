@@ -1,0 +1,14 @@
+PROJECT BOX REQUIREMENTS
+
+
+It is requested to create a class called Box with the following characteristics:
+
+   • Must have 3 integer attributes (width, height, and depth)
+   • It must have 2 constructors, one empty and one with 3 arguments, one
+     for each attribute of the class.
+   • You must have the method that calculates the volume of the box according to the
+     formula of the previous sheet. FORMULA VOLUME:  Volume = width * height * depth
+   • Create a test class to create an object of type box that has
+     as values: width = 3, height = 2, depth = 6 and send to print
+     the volume of the box according to the values provided
+     previously
