@@ -12,4 +12,9 @@ public class Arithmetic {
         System.out.println("The result of the sum is: " + result);
     }
 
+    // Method to sum with integer return 
+    public int sumWithReturn(){
+        return a + b;
+    }
+
 }
