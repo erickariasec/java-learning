@@ -34,4 +34,10 @@ public class Person {
     public void setRemoved(boolean removed){    // SETTER
         this.removed = removed;
     }
+
+    public String toString(){
+        return "Persona [ name: " + this.name +
+                ", salary: " + this.salary +
+                ", removed: " + this.removed + " ]";
+    }
 }
