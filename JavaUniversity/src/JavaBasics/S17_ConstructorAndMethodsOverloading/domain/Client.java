@@ -10,7 +10,7 @@ public class Client extends Person{
 
     public Client(String name, char genre, int age, String address, Date registrationDate, boolean vip){
         super(name, genre, age, address);   // super must be always the first line for inheritance - It calls Parent Class Constructor
-        idClient = ++JavaBasics.S17_ConstructorAndMethodsOverloading.domain.Client.counterClient;
+        idClient = ++Client.counterClient;
         this.registrationDate = registrationDate;
         this.vip = vip;
     }
