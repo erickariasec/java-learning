@@ -7,7 +7,7 @@ public class Employee extends Person{   // Employee Class is child of Person (Pe
 
     public Employee(String name, double salary){    // Constructor with 2 Parameters
         super(name);    // Calls constructor from Parent Class (Initialize)
-        this.idEmployee = ++JavaBasics.S17_ConstructorAndMethodsOverloading.domain.Employee.counterEmployee;   // Because of it is static, it will increment in each new object
+        this.idEmployee = ++Employee.counterEmployee;   // Because of it is static, it will increment in each new object
         this.salary = salary;
     }
 
