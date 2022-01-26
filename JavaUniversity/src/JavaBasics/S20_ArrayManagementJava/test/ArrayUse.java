@@ -22,5 +22,16 @@ public class ArrayUse {
         for(int i = 0; i < ages.length; i++){
             System.out.println("ages at position " + i + " = " + ages[i]);
         }
+
+        System.out.println("\n\n");
+
+        // Array of Fruits
+        String[] fruits = {"Apple", "Orange", "Banana", "Lemon", "Pear"};
+
+        for(int i=0; i < fruits.length; i++){
+            System.out.println("fruits at position " + i + " = " + fruits[i] +
+                    " is Fruit N°" + (i+1));
+        }
+
     }
 }
