@@ -15,5 +15,12 @@ public class ArrayUse {
         System.out.println("ages at position 0 = " + ages[0]);
         System.out.println("ages at position 1 = " + ages[1]);
         System.out.println("ages at position 2 = " + ages[2]);
+
+        System.out.println("\n\n");
+
+        // DOING THE SAME BUT WITH BUCLE FOR
+        for(int i = 0; i < ages.length; i++){
+            System.out.println("ages at position " + i + " = " + ages[i]);
+        }
     }
 }
