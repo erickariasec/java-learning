@@ -71,5 +71,33 @@ public class MatrixUse {                        //      COLUMNS  COLUMNS
             }
         }
 
+
+        // CREATE AN ARRAY OF FRUITS
+
+        System.out.println("\n");
+
+        // It is not required to be a square matrix
+        String[][] fruits = {{"Watermelon", "Lemon"}, {"Strawberry", "Orange", "Pear", "Grape"},  {"Pineapple", "Apple"}};
+
+        /* ----> DEBUG TO SEE WHAT IS HAPPENING INSIDE BUCLE FOR <---- */
+
+        for(int line = 0; line < fruits.length; line++){
+            System.out.println();
+            for(int column = 0; column < fruits[line].length; column++){
+                System.out.print(fruits[line][column] + "\t\t\t");
+            }
+        }
+
+        System.out.println("\n");
+
+        /* ----> DEBUG TO SEE WHAT IS HAPPENING INSIDE BUCLE FOR <---- */
+
+        for(int line = 0; line < fruits.length; line++){
+            System.out.println();
+            for(int column = 0; column < fruits[line].length; column++){
+                System.out.print("fruits at position [" + line + "][" + column + "] = " + fruits[line][column] + "\t\t\t");
+            }
+        }
+
     }
 }
