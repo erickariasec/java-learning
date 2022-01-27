@@ -52,9 +52,9 @@ public class MatrixUse {                        //      COLUMNS  COLUMNS
         /* ----> DEBUG TO SEE WHAT IS HAPPENING INSIDE BUCLE FOR <---- */
 
         // ANOTHER WAY USING BUCLE FOR WITH VARIABLES i AND j
-        for(int i = 0; i < ages.length; i++){
+        for(int i = 0; i < 3; i++){     // 3 refers to the number of lines
             System.out.println();
-            for(int j = 0; j < ages[i].length; j++){
+            for(int j = 0; j < 2; j++){     // 2 refers to the number of columns
                 System.out.print(ages[i][j] + " ");
             }
         }
