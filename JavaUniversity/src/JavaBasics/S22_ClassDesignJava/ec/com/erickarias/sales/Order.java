@@ -31,4 +31,13 @@ public class Order {
         return total;
     }
 
+    public void showOrder(){    // Method to Show Order
+        System.out.println("ID Order: " + this.idOrder);
+        double totalOrder = this.calculateTotal();
+        System.out.println("Total Order: $" + totalOrder);
+        System.out.println("Order Products: ");
+        for(int i=0; i < this.productCounter; i++){
+            System.out.println(this.products[i]);
+        }
+    }
 }
