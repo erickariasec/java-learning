@@ -13,7 +13,8 @@ public class InvertWords {
 
         for(int i=word.length()-1; i>=0; i--){
             // Print to visualize what is happening
-            System.out.println(invertedWord+=word.charAt(i));
+            //System.out.println(invertedWord+=word.charAt(i));
+            invertedWord+=word.charAt(i);
         }
 
         System.out.println("\nThis is the inverted:\n" + invertedWord);
