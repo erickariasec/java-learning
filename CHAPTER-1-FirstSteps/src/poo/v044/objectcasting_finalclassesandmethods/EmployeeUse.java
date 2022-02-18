@@ -21,6 +21,9 @@ public class EmployeeUse {
         myEmployees[6]=new Headship("Marla Villarroel", 95000, 1999, 9, 12);
         // This is exactly the same, is another way to use POLYMORPHISM
 
+        Headship bossFinance = (Headship) myEmployees[6]; // OBJECT CASTING /* Converts an object from one type to another */
+        bossFinance.setIncentive(55000);
+
         // BUCLE FOR EACH (Improved)
         for(Employee i: myEmployees){
             i.raiseSalary(5);
