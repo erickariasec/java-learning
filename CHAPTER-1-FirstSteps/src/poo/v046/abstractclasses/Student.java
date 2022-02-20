@@ -2,7 +2,7 @@ package poo.v046.abstractclasses;
 
 public class Student extends Person{
 
-    private String career;
+    private final String career;
 
     public Student(String name, String career){
         super(name);
