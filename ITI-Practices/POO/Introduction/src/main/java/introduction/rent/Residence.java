@@ -2,7 +2,8 @@
 
 package introduction.rent;
 
-public abstract class Residence {
+public abstract class Residence { // Residence, además de ser la clase padre, es una clase Abstracta
+    // ENCAPSULACIÓN DE ATRIBUTOS
     private String direccion;
     private String ciudad;
     private String provincia;
@@ -10,6 +11,7 @@ public abstract class Residence {
     private double rentaMensual;
     protected final double IMPUESTO = 50.00;
 
+    // MÉTODO CONSTRUCTOR
     public Residence(String direccion, String ciudad, String provincia,
             String codigoPostal, double rentaMensual) {
         this.direccion = direccion;
@@ -19,6 +21,8 @@ public abstract class Residence {
         this.rentaMensual = rentaMensual;
     }
 
+    // CREACIÓN DE GETTERS Y SETTERS
+    
     public String getDireccion() {
         return direccion;
     }
@@ -61,6 +65,7 @@ public abstract class Residence {
     
     public abstract double primerPago();
 
+    // Las clases heredadas actuarán bajo el concepto de POLIMORFISMO
     @Override
     public String toString() {
         return "Direccion: " + direccion + ",\nCiudad: " + ciudad +
