@@ -2,10 +2,11 @@
 
 package introduction.rent;
 
-public class Apartment extends Residence {
+public class Apartment extends Residence { // Aplicando Herencia
     
-    private int numeroDepartamento;
+    private int numeroDepartamento; // ENCAPSULACIÓN
 
+    // MÉTODO CONSTRUCTOR
     public Apartment(String direccion, int numeroDepartamento, String ciudad, String provincia,
             String codigoPostal, double rentaMensual) {
         super(direccion, ciudad, provincia, codigoPostal, rentaMensual);
@@ -20,6 +21,7 @@ public class Apartment extends Residence {
         this.numeroDepartamento = numeroDepartamento;
     }
     
+    @Override
     public double primerPago(){
         return getRentaMensual() + IMPUESTO + (getRentaMensual() / 2);
     }
